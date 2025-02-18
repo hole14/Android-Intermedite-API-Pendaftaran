@@ -48,7 +48,7 @@ dependencies {
 
     //retrofit2
     implementation(libs.retrofit)
-    implementation(libs.retrofit2.converter.gson)
+    implementation(libs.converter.gson)
     implementation(libs.logging.interceptor)
 
     testImplementation(libs.junit)
