@@ -7,6 +7,4 @@ import retrofit2.http.GET
 interface ApiService {
     @GET("api-list-siswa.php")
     fun getAllSiswa(): Call<ListSiswaResponse>
-
-
 }
