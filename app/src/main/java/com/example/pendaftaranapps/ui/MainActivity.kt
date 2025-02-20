@@ -1,5 +1,6 @@
 package com.example.pendaftaranapps.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -32,6 +33,15 @@ class MainActivity : AppCompatActivity() {
         binding.rcListSiswa.addItemDecoration(itemDecoration)
 
         findAllSiswa()
+
+        binding.fabAdd.setOnClickListener {
+            startActivity(Intent(this@MainActivity, AddUpdateActivity::class.java))
+        }
+
+        binding.fabDelete.setOnClickListener {
+            startActivity(Intent(this@MainActivity, AddUpdateActivity::class.java))
+
+        }
     }
 
     private fun findAllSiswa() {
