@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pendaftaranapps.R
 import com.example.pendaftaranapps.data.respone.DataItem
 import com.example.pendaftaranapps.data.respone.ListSiswaResponse
 import com.example.pendaftaranapps.data.retrofit.APIConfig
