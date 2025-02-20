@@ -1,5 +1,7 @@
 package com.example.pendaftaranapps.ui
 
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -20,6 +22,13 @@ class ListSiswaAdapter: ListAdapter<DataItem, ListSiswaAdapter.ViewHolder>(DIFF_
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val dataItem = getItem(position)
         holder.bind(dataItem)
+
+        val activity = holder.itemView.context as Activity
+        holder.binding.rvSiswa.setOnClickListener {
+            val intent = Intent(activity, AddUpdateActivity::class.java)
+            intent.putExtra(AddUpdateActivity.EXTRA_DATA, dataItem)
+            activity.startActivity(intent)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
