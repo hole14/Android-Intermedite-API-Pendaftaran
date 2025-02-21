@@ -1,4 +1,4 @@
-package com.example.pendaftaranapps.ui
+package com.example.pendaftaranapps.ui.adapter
 
 import android.app.Activity
 import android.content.Intent
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pendaftaranapps.data.respone.DataItem
 import com.example.pendaftaranapps.databinding.ItemSiswaBinding
+import com.example.pendaftaranapps.ui.addupdatedelete.AddUpdateActivity
 
 class ListSiswaAdapter: ListAdapter<DataItem, ListSiswaAdapter.ViewHolder>(DIFF_CALLBACK) {
     class ViewHolder(val binding: ItemSiswaBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -28,6 +29,7 @@ class ListSiswaAdapter: ListAdapter<DataItem, ListSiswaAdapter.ViewHolder>(DIFF_
             val intent = Intent(activity, AddUpdateActivity::class.java)
             intent.putExtra(AddUpdateActivity.EXTRA_DATA, dataItem)
             activity.startActivity(intent)
+            activity.finish()
         }
     }
 
